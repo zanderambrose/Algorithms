@@ -15,9 +15,12 @@ int main()
 				minIndex = j;
 			}
 		}
-		int temp = myArr[i];
-		myArr[i] = myArr[minIndex];
-		myArr[minIndex] = temp;
+		if (i != minIndex)
+		{
+			int temp = myArr[i];
+			myArr[i] = myArr[minIndex];
+			myArr[minIndex] = temp;
+		}
 	}
 
 	for (auto num : myArr)
